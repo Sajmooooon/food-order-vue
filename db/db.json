@@ -1,0 +1,58 @@
+{
+  "food": [
+    {
+      "id": 1,
+      "name": "Margarita",
+      "price": 5.5,
+      "gram": "500g",
+      "type": "Pizza",
+      "image": "pizza/salami.jpg"
+
+    },
+    {
+      "id": 2,
+      "name": "Salami",
+      "price": 7.5,
+      "gram": "650g",
+      "type": "Pizza",
+      "image": "pizza/salami.jpg"
+
+    },
+    {
+      "id": 3,
+      "name": "Hawai",
+      "price": 7.5,
+      "gram": "650g",
+      "type": "Pizza",
+      "image": "pizza/salami.jpg"
+
+    },
+    {
+      "id": 4,
+      "name": "Al Tonno",
+      "price": 7.5,
+      "gram": "620g",
+      "type": "Pizza",
+      "image": "pizza/salami.jpg"
+
+    },
+    {
+      "id": 5,
+      "name": "Al Capone",
+      "price": 7.5,
+      "gram": "650g",
+      "type": "Pizza",
+      "image": "pizza/salami.jpg"
+
+    },
+    {
+      "id": 6,
+      "name": "Quatro Formaggi",
+      "price": 8,
+      "gram": "700g",
+      "type": "Pizza",
+      "image": "pizza/salami.jpg"
+
+    }
+  ]
+}
