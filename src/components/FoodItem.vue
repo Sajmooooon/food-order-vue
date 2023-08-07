@@ -39,23 +39,30 @@ export default  defineComponent({
   position: relative;
   height: auto;
   overflow: hidden;
+  cursor: pointer;
+}
+
+.food-item:hover img{
+
+  transform: scale(1.05);
 }
 
 .food-item img{
+  transition: 0.3s all;
   width: 100%;
   top: 0;
   max-height: 300px;
   /*max-height: 250px;*/
   /*height: 100%;*/
   object-fit: contain;
-  z-index: 5;
+  z-index: 2;
   /*top: -20px;*/
 }
 
 .food-body{
   position: relative;
   /*position: absolute;*/
-  z-index: 2;
+  z-index: 5;
   width: 100%;
   height: 100%;
   /*background: rgba(0,0,0,0.2);*/
