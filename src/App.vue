@@ -1,7 +1,8 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-  </nav>
+<!--  <nav>-->
+<!--    <router-link to="/">Home</router-link> |-->
+<!--  </nav>-->
+<!--  <i class='bx bxl-github mr-2' ></i>-->
   <router-view/>
 </template>
 
@@ -15,7 +16,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  background: #f8f4f4;
+  min-height: 100vh;
+  width: 100%;
 }
 
 nav {
