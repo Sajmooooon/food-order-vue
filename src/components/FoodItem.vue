@@ -31,8 +31,8 @@ export default  defineComponent({
 
 <style scoped>
 .food-item{
+  max-width: 33%;
   flex: 33%;
-  max-width: 100%;
   min-width: 350px;
   min-height: 300px;
   border-radius: 5px;
@@ -63,6 +63,7 @@ export default  defineComponent({
 
 @media only screen and (max-width: 1280px) {
   .food-item{
+    max-width: 100%;
     flex: 50%;}
 }
 
