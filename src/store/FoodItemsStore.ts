@@ -37,7 +37,6 @@ export const useFoodItemsStore = defineStore('foodItemsStore',{
 
        },
 
-
         sortFood(){
             this.sortedFood = this.foodList.filter(food=> food.type == this.selectedItem)
 
@@ -47,6 +46,13 @@ export const useFoodItemsStore = defineStore('foodItemsStore',{
             this.selectedItem = newValue
             this.sortFood()
             console.log(this.sortedFood)
+        },
+
+        searchFood(searchedFood: string){
+           console.log(searchedFood)
+          this.sortedFood = this.foodList.filter(food=> food.name.toLowerCase().includes(searchedFood.toLowerCase()) || food.type.toLowerCase().includes(searchedFood.toLowerCase()))
+            console.log(this.sortedFood)
+            this.selectedItem = null
         }
     }
 })
