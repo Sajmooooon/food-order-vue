@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col food-item left-item-selected">
+  <div class="flex flex-col food-item left-item-selected shadow-[3px_3px_3px_rgba(0,0,0,0.2)]">
     <img class="relative h-3/4" :src="require('@/assets/'+$props.food.image)" :alt="$props.food.name">
     <div class="food-body mt-2 px-5 h-1/4">
       <div class="flex flex-col absolute justify-center ">
