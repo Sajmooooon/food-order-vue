@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full bg-white rounded-lg mb-10 flex items-start">
+  <div class="w-full bg-white rounded-lg mb-10 flex items-start shadow-[5px_5px_10px_rgba(0,0,0,0.2)]">
     <div class="p-10 w-full left-0 right-auto flex justify-between items-center gap-5">
       <div class="text-left">
         <h4 class="text-3xl font-bold">Pizzeria</h4>
