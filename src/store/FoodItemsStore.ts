@@ -10,10 +10,10 @@ export const useFoodItemsStore = defineStore('foodItemsStore',{
         errorMessage: null as string | null,
         selectedItem: 'Pizza' as SelectItem,
         items: [
-            {title: 'Pizza', icon: "bx bx-bowl-hot", id: 1},
-            {title: 'Dish', icon: "bx bx-bowl-rice", id: 2},
+            {title: 'Pizza', icon: "bx bxs-pizza", id: 1},
+            {title: 'Dish', icon: "bx bx-dish", id: 2},
             {title: 'Soup', icon: "bx bx-bowl-hot", id: 3},
-            {title: 'Salad', icon: "bx bx-bowl-hot", id: 4},
+            {title: 'Salad', icon: "bx bx-bowl-rice", id: 4},
 
         ] as LeftItem[]
     }),
