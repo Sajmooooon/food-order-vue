@@ -6,7 +6,7 @@
       "price": 5.5,
       "gram": "500g",
       "type": "Pizza",
-      "image": "pizza/salami.jpg"
+      "image": "pizza/salami.png"
 
     },
     {
@@ -15,7 +15,7 @@
       "price": 7.5,
       "gram": "650g",
       "type": "Pizza",
-      "image": "pizza/salami.jpg"
+      "image": "pizza/salami.png"
 
     },
     {
@@ -24,7 +24,7 @@
       "price": 7.5,
       "gram": "650g",
       "type": "Pizza",
-      "image": "pizza/salami.jpg"
+      "image": "pizza/salami.png"
 
     },
     {
@@ -33,7 +33,7 @@
       "price": 7.5,
       "gram": "620g",
       "type": "Pizza",
-      "image": "pizza/salami.jpg"
+      "image": "pizza/salami.png"
 
     },
     {
@@ -42,7 +42,7 @@
       "price": 7.5,
       "gram": "650g",
       "type": "Pizza",
-      "image": "pizza/salami.jpg"
+      "image": "pizza/salami.png"
 
     },
     {
@@ -51,7 +51,17 @@
       "price": 8,
       "gram": "700g",
       "type": "Pizza",
-      "image": "pizza/salami.jpg"
+      "image": "pizza/salami.png"
+
+    },
+
+    {
+      "id": 7,
+      "name": "Chicken Salad",
+      "price": 5.5,
+      "gram": "350g",
+      "type": "Salad",
+      "image": "salad/salad.png"
 
     }
   ]
