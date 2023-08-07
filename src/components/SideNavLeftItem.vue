@@ -7,10 +7,9 @@
 </template>
 
 <script lang="ts">
-import {computed, defineComponent, PropType, ref} from "vue";
+import { defineComponent, PropType, ref} from "vue";
 import LeftItem from "@/types/LeftItem";
-import {useLeftItemStore} from "@/store/LeftItemStore"
-import {storeToRefs} from "pinia/dist/pinia";
+import {useFoodItemsStore} from "@/store/FoodItemsStore"
 
 export default defineComponent({
   name: "SideNavLeftItem",
@@ -25,7 +24,7 @@ export default defineComponent({
     }
   },
   setup(props){
-    const store = useLeftItemStore()
+    const store = useFoodItemsStore()
     const currentItem = ref<string>(props.item.title)
     return {currentItem,store}
   }

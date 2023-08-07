@@ -9,7 +9,7 @@
 
 <script lang="ts">
 import SideNavLeftItem from "@/components/SideNavLeftItem.vue";
-import {useLeftItemStore} from "@/store/LeftItemStore"
+import {useFoodItemsStore} from "@/store/FoodItemsStore";
 import {storeToRefs} from "pinia/dist/pinia";
 
 export default {
@@ -17,7 +17,7 @@ export default {
   components: {SideNavLeftItem},
   setup(){
 
-    const store = useLeftItemStore()
+    const store = useFoodItemsStore()
 
     const {selectedItem, items} = storeToRefs(store)
 
