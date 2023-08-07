@@ -3,9 +3,11 @@
     <div v-if="errorMessage">
       {{errorMessage}}
     </div>
-    <FoodItem v-else v-for="food in sortedFood" :food="food" :key="food.id">
+    <transition-group v-else name="foodItems">
+      <FoodItem v-for="food in sortedFood" :food="food" :key="food.id">
 
-    </FoodItem>
+      </FoodItem>
+    </transition-group>
   </div>
 </template>
 
@@ -27,5 +29,10 @@ export default {
 </script>
 
 <style scoped>
-
+.foodItems-enter-active, .foodItems-left-active{
+  transition: transform 0.5s;
+}
+.foodItems-leave-to, .foodItems-enter-from{
+  transform: scale(0);
+}
 </style>
