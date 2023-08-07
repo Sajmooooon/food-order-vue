@@ -1,13 +1,14 @@
 import {defineStore} from "pinia";
 import FoodItem from "@/types/FoodItem";
 import LeftItem from "@/types/LeftItem";
+import SelectItem from "@/types/SelectItem";
 
 export const useFoodItemsStore = defineStore('foodItemsStore',{
     state: ()=>({
         foodList: [] as FoodItem[],
         sortedFood: [] as FoodItem[],
         errorMessage: null as string | null,
-        selectedItem: 'Pizza',
+        selectedItem: 'Pizza' as SelectItem,
         items: [
             {title: 'Pizza', icon: "bx bx-bowl-hot", id: 1},
             {title: 'Dish', icon: "bx bx-bowl-rice", id: 2},
@@ -42,7 +43,7 @@ export const useFoodItemsStore = defineStore('foodItemsStore',{
 
         },
 
-        changeSelectedItem(newValue: string){
+        changeSelectedItem(newValue: SelectItem){
             this.selectedItem = newValue
             this.sortFood()
             console.log(this.sortedFood)
