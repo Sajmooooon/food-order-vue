@@ -27,6 +27,7 @@ export default {
     const searchItem = () =>{
       console.log(search.value)
       store.searchFood(search.value)
+      search.value = ''
     }
 
     return {search,searchItem}
