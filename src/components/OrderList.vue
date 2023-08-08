@@ -1,15 +1,17 @@
 <template>
-<div class="h-full overflow-y-auto flex flex-col mb-2">
-  <div class="p-2.5 text-xl" v-for="i in arr" :key="i">{{i}}</div>
+<div class="overflow-y-scroll flex flex-col mb-2">
+  <OrderItem v-for="i in arr" :key="i"></OrderItem>
 </div>
 </template>
 
 <script>
+import OrderItem from "@/components/OrderItem";
 export default {
   name: "OrderList",
+  components: {OrderItem},
   data(){
     return{
-      arr: [1,2,3,4,5]
+      arr: [1,2,3,4,5,6]
     }
   }
 }

@@ -13,9 +13,9 @@
 
       <div class="flex items-center gap-2">
         <div class=" flex justify-center flex items-center ">
-          <i class='bx bx-plus border rounded-l  border-2 py-2 px-1 bg-white border-indigo-700 text-base cursor-pointer' ></i>
-          <input type="number" v-model="test" class=" w-[35px] p-2 text-center  border-indigo-700 border-y-2 text-base  w-full h-auto outline-none" />
-          <i class='bx bx-minus rounded-r  border-y-2 py-2 px-1 border-2 border-indigo-700 text-base bg-white cursor-pointer' ></i>
+          <i class='bx bx-plus  rounded-l  border-2 b py-2 px-1 bg-white border-indigo-700 text-base cursor-pointer' ></i>
+          <input type="number" min="0" v-model="test" class=" w-[35px] p-2 text-center  border-indigo-700 border-y-2 text-base  w-full h-auto outline-none" />
+          <i class='bx bx-minus rounded-r   py-2 px-1 border-2 border-indigo-700 text-base bg-white cursor-pointer' ></i>
         </div>
 
 

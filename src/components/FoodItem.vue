@@ -2,7 +2,7 @@
   <div class="flex flex-col food-item left-item-selected shadow-[3px_3px_3px_rgba(0,0,0,0.2)]">
     <img class="relative h-3/4" :src="require('@/assets/'+$props.food.image)" :alt="$props.food.name">
     <div class="food-body mt-2 px-5 h-1/4">
-      <div class="flex flex-col absolute justify-center ">
+      <div class="flex flex-col absolute bottom-1 justify-center pb-2 ">
         <div class="flex gap-2 text-left align-middle items-center  top-auto">
           <h3 class="text-white text-2xl font-bold">{{$props.food.name}}</h3>
           <span class="text-gray-500 bg-white font-bold shadow-[2px_2px_5px_rgba(255,255,255,0.3)] rounded-lg p-1">{{$props.food.gram}}</span>
