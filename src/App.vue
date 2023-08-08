@@ -11,12 +11,21 @@
 </script>
 
 <style>
+body{
+  min-width: fit-content;
+  background: #0c1424;
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: auto;
+  background: #f8f4f4;
+
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  background: #f8f4f4;
+
   min-height: 100vh;
   width: 100%;
 }
