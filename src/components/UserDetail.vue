@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="rounded-b-2xl w-full left-item-selected p-5 flex justify-between items-center text-xl">
+
+    <div class="rounded-b-2xl w-full left-item-selected p-5 flex justify-between items-center text-xl shadow-[5px_5px_10px_rgba(0,0,0,0.5)]">
         <div @click="cartItemStore.toggleCart()" class="cursor-pointer">
           <i class='bx bx-x-circle text-4xl'></i>
         </div>
@@ -17,7 +17,6 @@
           </div>
         </div>
     </div>
-  </div>
 </template>
 
 <script>
