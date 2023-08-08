@@ -11,8 +11,11 @@
           </div>
           <div v-else>
             <div class="flex gap-2">
-              <img src="../assets/logo.png" class="rounded-2xl h-[40px] " >
-              <i class='bx bx-log-in text-4xl' @click="userInfoStore.logoutUser()"></i>
+              <div class="relative">
+                <img src="../assets/logo.png" class="rounded-2xl h-[40px] " >
+                <div class="w-2 h-2 bg-green-600 rounded-full absolute right-0 z-2 bottom-0 border-1 border-gray-300"></div>
+              </div>
+              <i class='bx bx-log-in text-4xl cursor-pointer' @click="userInfoStore.logoutUser()"></i>
             </div>
           </div>
         </div>
