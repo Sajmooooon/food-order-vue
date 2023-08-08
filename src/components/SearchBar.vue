@@ -5,9 +5,19 @@
         <h4 class="text-3xl font-bold">Pizzeria</h4>
         <p class="italic">Quick and Tasty </p>
       </div>
-      <div class="flex items-center border-gray-300 border-b text-lg">
-        <input @keydown.enter="searchItem" placeholder="Search" class="left-0 px-5 py-2.5 outline-none" type="text" v-model="search">
-        <i @click="searchItem" class='bx bx-search'></i>
+      <div class="flex gap-2">
+        <div class="flex items-center border-gray-300 border-b text-lg">
+          <input @keydown.enter="searchItem" placeholder="Search" class="left-0 px-5 py-2.5 outline-none w-full" type="text" v-model="search">
+          <i @click="searchItem" class='bx bx-search'></i>
+        </div>
+
+        <div class="left-item-selected rounded-2xl cursor-pointer select-none" @click="cartItemStore.toggleCart()">
+          <div class="py-3 px-5 text-2xl">
+            <i class='bx bx-cart'></i>
+            <span>4</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -17,20 +27,23 @@
 import {ref} from "vue";
 import {useFoodItemsStore} from "@/store/FoodItemsStore";
 import {storeToRefs} from "pinia/dist/pinia";
+import {useCartItemsStore} from "@/store/CartItemsStore";
 
 export default {
   name: "SearchBar",
   setup(){
     const search = ref<string>('')
-    const store = useFoodItemsStore()
+    const foodItemStore = useFoodItemsStore()
+    const cartItemStore= useCartItemsStore()
+
+
 
     const searchItem = () =>{
-      console.log(search.value)
-      store.searchFood(search.value)
+      foodItemStore.searchFood(search.value)
       search.value = ''
     }
 
-    return {search,searchItem}
+    return {search,searchItem, cartItemStore}
   }
 }
 </script>
