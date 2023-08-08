@@ -1,5 +1,6 @@
 <template>
   <div :class="{'showing': showCart}" class="side-nav-right">
+    <UserDetail></UserDetail>
   </div>
 </template>
 
@@ -12,7 +13,7 @@ import UserDetail from "@/components/UserDetail.vue";
 export default defineComponent(
     {
       name: "SideNavRight",
-      components: {},
+      components: {UserDetail},
       setup(){
         const cartItemStore = useCartItemsStore()
         const {showCart} = storeToRefs(cartItemStore)

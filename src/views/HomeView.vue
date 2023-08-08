@@ -6,7 +6,9 @@
           <SearchBar></SearchBar>
           <FoodItemsList></FoodItemsList>
       </div>
+
     </div>
+    <SideNavRight></SideNavRight>
   </div>
 </template>
 
@@ -15,9 +17,11 @@ import { Options, Vue } from 'vue-class-component';
 import SideNavLeft from "@/components/SideNavLeft.vue";
 import FoodItemsList from "@/components/FoodItemsList.vue";
 import SearchBar from "@/components/SearchBar.vue";
+import SideNavRight from "@/components/SideNavRight.vue";
 
 @Options({
   components: {
+    SideNavRight,
     SearchBar,
     FoodItemsList,
     SideNavLeft
