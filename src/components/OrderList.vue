@@ -9,7 +9,6 @@
 import OrderItem from "@/components/OrderItem";
 import {useOrderItemsStore} from "@/store/OrderItemsStore";
 import {storeToRefs} from "pinia";
-import {computed, watch} from "vue";
 
 export default {
   name: "OrderList",

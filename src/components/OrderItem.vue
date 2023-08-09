@@ -27,7 +27,7 @@
 </template>
 
 <script lang="ts">
-import {defineComponent, PropType, ref, toRef} from "vue";
+import {defineComponent, PropType} from "vue";
 import Order from "@/types/Order";
 import {useOrderItemsStore} from "@/store/OrderItemsStore";
 export default defineComponent({
@@ -38,9 +38,8 @@ export default defineComponent({
       type: Object as PropType<Order>
     }
   },
-  setup(props){
+  setup(){
     const orderItemsStore = useOrderItemsStore()
-
     return {orderItemsStore}
   }
 
