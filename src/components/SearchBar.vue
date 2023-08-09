@@ -11,7 +11,7 @@
           <i @click="searchItem" class='bx bx-search'></i>
         </div>
 
-        <div class="left-item-selected rounded-2xl cursor-pointer select-none" @click="cartItemStore.toggleCart()">
+        <div class="background-violet rounded-2xl cursor-pointer select-none" @click="cartItemStore.toggleCart()">
           <div class="py-3 px-5 text-2xl">
             <i class='bx bx-cart'></i>
             <span v-if="numberOfItems>0">{{numberOfItems}}</span>

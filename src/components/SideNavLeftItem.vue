@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col w-3/4 cursor-pointer py-2 mx-2 my-3 text-2xl text-center align-middle p-2.5 font-bold hover:border-indigo-700 border-2 border-transparent transition-all ease-in delay-300 rounded-2xl" :class="{ 'left-item-selected': selected }"
+  <div class="flex flex-col w-3/4 cursor-pointer py-2 mx-2 my-3 text-2xl text-center align-middle p-2.5 font-bold hover:border-indigo-700 border-2 border-transparent transition-all ease-in delay-300 rounded-2xl" :class="{ 'background-violet': selected }"
   @click="store.changeSelectedItem(currentItem)">
     <i class='bx text-5xl'  :class="[item.icon, {'text-gray-500': !selected}]"></i>
     <h3 class="text-sm" :class="{'text-indigo-700 ': !selected}">{{item.title}}</h3>

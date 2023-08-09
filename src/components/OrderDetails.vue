@@ -34,7 +34,7 @@
             <span class="text-3xl text-violet-700 text-right py-2">{{total}} €</span>
           </div>
 
-          <button name="submit" type="submit" class="left-item-selected text-3xl py-2 px-5 rounded-2xl">Checkout</button>
+          <button name="submit" type="submit" class="background-violet text-3xl py-2 px-5 rounded-2xl">Checkout</button>
         </div>
       </form>
   </div>

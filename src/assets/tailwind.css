@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 
-.left-item-selected{
+.background-violet{
     @apply bg-gradient-to-r from-violet-600 to-indigo-700 text-white
 }
 
