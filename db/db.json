@@ -6,7 +6,7 @@
       "price": 5.5,
       "gram": "500g",
       "type": "Pizza",
-      "image": "pizza/salami.png"
+      "image": "pizza/Margarita.png"
 
     },
     {
@@ -15,7 +15,7 @@
       "price": 7.5,
       "gram": "650g",
       "type": "Pizza",
-      "image": "pizza/salami.png"
+      "image": "pizza/Salami.png"
 
     },
     {
@@ -24,16 +24,18 @@
       "price": 7.5,
       "gram": "650g",
       "type": "Pizza",
-      "image": "pizza/salami.png"
+      "image": "pizza/Hawai.png"
 
     },
     {
       "id": 4,
-      "name": "Al Tonno",
+
+
+      "name": "Funghi",
       "price": 7.5,
-      "gram": "620g",
+      "gram": "650g",
       "type": "Pizza",
-      "image": "pizza/salami.png"
+      "image": "pizza/Funghi.png"
 
     },
     {
@@ -42,21 +44,80 @@
       "price": 7.5,
       "gram": "650g",
       "type": "Pizza",
-      "image": "pizza/salami.png"
+      "image": "pizza/Al Capone.png"
 
     },
     {
       "id": 6,
-      "name": "Quatro Formaggi",
-      "price": 8,
-      "gram": "700g",
+      "name": "Extra",
+      "price": 8.5,
+      "gram": "800g",
       "type": "Pizza",
-      "image": "pizza/salami.png"
+      "image": "pizza/Extra.png"
 
+    },
+    {
+      "id": 7,
+      "name": "Quattro formaggi",
+      "price": 7.5,
+      "gram": "650g",
+      "type": "Pizza",
+      "image": "pizza/Quattro.png"
     },
 
     {
-      "id": 7,
+      "id": 8,
+      "name": "Khanbaba",
+      "price": 2.5,
+      "gram": "500ml",
+      "type": "Soup",
+      "image": "soup/Khanbaba.png"
+    },
+    {
+      "id": 9,
+      "name": "Goulash",
+      "price": 2.5,
+      "gram": "500ml",
+      "type": "Soup",
+      "image": "soup/Goulash.png"
+    },
+    {
+      "id": 10,
+      "name": "Minestrone",
+      "price": 2.5,
+      "gram": "500ml",
+      "type": "Soup",
+      "image": "soup/Minestrone.png"
+    },
+
+    {
+      "id": 11,
+      "name": "Chicken Breast",
+      "price": 7.5,
+      "gram": "450g",
+      "type": "Dish",
+      "image": "dish/Chicken breast.png"
+    },
+    {
+      "id": 12,
+      "name": "Chicken Pieces",
+      "price": 7.5,
+      "gram": "450g",
+      "type": "Dish",
+      "image": "dish/Chicken pieces.png"
+    },
+
+    {
+      "id": 13,
+      "name": "Gyros",
+      "price": 8,
+      "gram": "500g",
+      "type": "Dish",
+      "image": "dish/Gyros.png"
+    },
+
+    {
+      "id": 14,
       "name": "Chicken Salad",
       "price": 5.5,
       "gram": "350g",
