@@ -15,10 +15,24 @@ export const useFoodItemsStore = defineStore('foodItemsStore',{
             {title: 'Soup', icon: "bx bx-bowl-hot", id: 3},
             {title: 'Salad', icon: "bx bx-bowl-rice", id: 4},
 
-        ] as LeftItem[]
+        ] as LeftItem[],
+        numberOfLoadedItems: 6 as number
     }),
 
+    getters: {
+        foodListLoaded: (state) =>{
+            return state.sortedFood.slice(0, state.numberOfLoadedItems)
+        },
+        numberOfItems: (state) =>{
+            return state.sortedFood.length
+        }
+    },
+
     actions: {
+        loadMoreItems(){
+          this.numberOfLoadedItems +=3
+        },
+
        async loadFoodList(){
            try {
                const data = await fetch('http://localhost:3000/food')
@@ -44,6 +58,7 @@ export const useFoodItemsStore = defineStore('foodItemsStore',{
 
         changeSelectedItem(newValue: SelectItem){
             this.selectedItem = newValue
+            this.numberOfLoadedItems = 3
             this.sortFood()
         },
 

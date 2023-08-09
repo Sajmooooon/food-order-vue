@@ -5,6 +5,8 @@
       <div class="p-10">
           <SearchBar></SearchBar>
           <FoodItemsList></FoodItemsList>
+          <LoadItemsButton></LoadItemsButton>
+
       </div>
 
     </div>
@@ -18,9 +20,11 @@ import SideNavLeft from "@/components/SideNavLeft.vue";
 import FoodItemsList from "@/components/FoodItemsList.vue";
 import SearchBar from "@/components/SearchBar.vue";
 import SideNavRight from "@/components/SideNavRight.vue";
+import LoadItemsButton from "@/components/LoadItemsButton.vue";
 
 @Options({
   components: {
+    LoadItemsButton,
     SideNavRight,
     SearchBar,
     FoodItemsList,

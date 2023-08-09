@@ -4,7 +4,7 @@
       {{errorMessage}}
     </div>
     <transition-group v-else name="foodItems">
-      <FoodItem v-for="food in sortedFood" :food="food" :key="food.id">
+      <FoodItem v-for="food in foodListLoaded" :food="food" :key="food.id">
 
       </FoodItem>
     </transition-group>
@@ -22,8 +22,8 @@ export default {
   setup(){
     const store = useFoodItemsStore()
     store.loadFoodList()
-    const {sortedFood,errorMessage} = storeToRefs(store)
-    return {sortedFood,errorMessage}
+    const {foodListLoaded,errorMessage} = storeToRefs(store)
+    return {foodListLoaded,errorMessage}
   }
 }
 </script>
