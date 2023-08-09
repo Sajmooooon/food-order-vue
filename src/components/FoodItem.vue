@@ -59,8 +59,6 @@ export default  defineComponent({
   width: 100%;
   top: 0;
   max-height: 300px;
-  /*max-height: 250px;*/
-  /*height: 100%;*/
   object-fit: contain;
   z-index: 2;
   /*top: -20px;*/
@@ -68,11 +66,9 @@ export default  defineComponent({
 
 .food-body{
   position: relative;
-  /*position: absolute;*/
   z-index: 5;
   width: 100%;
   height: 100%;
-  /*background: rgba(0,0,0,0.2);*/
 }
 
 @media only screen and (max-width: 1280px) {

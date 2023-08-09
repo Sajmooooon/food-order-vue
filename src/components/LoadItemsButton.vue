@@ -1,6 +1,6 @@
 <template>
   <button v-if="numberOfItems>numberOfLoadedItems" @click="foodItemsStore.loadMoreItems()" class="left-item-selected p-5
-   text-2xl rounded-2xl bottom-0 absolute my-5 shadow-[10px_5px_5px_rgba(0,0,0,0.3)]">Load More</button>
+   text-2xl rounded-2xl w-fit my-5 shadow-[10px_5px_5px_rgba(0,0,0,0.3)] hover:scale-110 transition-all ease-in-out delay-300">Load More</button>
 </template>
 
 <script lang="ts">

@@ -2,10 +2,14 @@
   <div class="h-screen w-full flex flex-row" >
     <SideNavLeft></SideNavLeft>
     <div class="pl-[120px] w-full">
-      <div class="p-10">
-          <SearchBar></SearchBar>
-          <FoodItemsList></FoodItemsList>
-          <LoadItemsButton></LoadItemsButton>
+      <div class="p-10 flex-col flex justify-between">
+          <div>
+            <SearchBar></SearchBar>
+            <FoodItemsList></FoodItemsList>
+          </div>
+          <div class="mt-10">
+            <LoadItemsButton></LoadItemsButton>
+          </div>
 
       </div>
 
