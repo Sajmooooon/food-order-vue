@@ -6,3 +6,16 @@
 .left-item-selected{
     @apply bg-gradient-to-r from-violet-600 to-indigo-700 text-white
 }
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    @apply bg-violet-600
+}
+
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-violet-700
+}
