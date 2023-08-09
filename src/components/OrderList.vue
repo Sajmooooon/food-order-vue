@@ -1,5 +1,5 @@
 <template>
-<div class="overflow-y-scroll flex flex-col mb-2">
+<div class="overflow-y-auto flex flex-col mb-2">
 <!--  <p>{{// orders}}</p>-->
   <OrderItem v-for="order in orders" :order="order" :key="order.food.id"></OrderItem>
 </div>
