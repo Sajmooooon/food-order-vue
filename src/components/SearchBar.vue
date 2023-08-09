@@ -14,7 +14,7 @@
         <div class="left-item-selected rounded-2xl cursor-pointer select-none" @click="cartItemStore.toggleCart()">
           <div class="py-3 px-5 text-2xl">
             <i class='bx bx-cart'></i>
-            <span>4</span>
+            <span v-if="numberOfItems>0">{{numberOfItems}}</span>
           </div>
         </div>
 
@@ -27,6 +27,8 @@
 import {ref} from "vue";
 import {useFoodItemsStore} from "@/store/FoodItemsStore";
 import {useCartItemsStore} from "@/store/CartItemsStore";
+import {useOrderItemsStore} from "@/store/OrderItemsStore";
+import {storeToRefs} from "pinia/dist/pinia";
 
 export default {
   name: "SearchBar",
@@ -34,7 +36,9 @@ export default {
     const search = ref<string>('')
     const foodItemStore = useFoodItemsStore()
     const cartItemStore= useCartItemsStore()
+    const orderItemStore = useOrderItemsStore()
 
+    const {numberOfItems} = storeToRefs(orderItemStore)
 
 
     const searchItem = () =>{
@@ -42,7 +46,7 @@ export default {
       search.value = ''
     }
 
-    return {search,searchItem, cartItemStore}
+    return {search,searchItem, cartItemStore, numberOfItems}
   }
 }
 </script>
