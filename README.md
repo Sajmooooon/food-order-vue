@@ -1,4 +1,7 @@
-# food-order-vue
+# Food Order
+
+## Description
+This project presents a user-friendly website that empowers users to effortlessly explore a diverse menu, manage their shopping cart, adjust quantities, modify address details, apply filters, and complete transactions seamlessly.
 
 ## Project setup
 ```
