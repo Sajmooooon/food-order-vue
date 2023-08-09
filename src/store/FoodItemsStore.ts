@@ -58,7 +58,7 @@ export const useFoodItemsStore = defineStore('foodItemsStore',{
 
         changeSelectedItem(newValue: SelectItem){
             this.selectedItem = newValue
-            this.numberOfLoadedItems = 3
+            this.numberOfLoadedItems = 6
             this.sortFood()
         },
 
