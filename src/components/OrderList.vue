@@ -1,19 +1,25 @@
 <template>
 <div class="overflow-y-scroll flex flex-col mb-2">
-  <OrderItem v-for="i in arr" :key="i"></OrderItem>
+<!--  <p>{{// orders}}</p>-->
+  <OrderItem v-for="order in orders" :order="order" :key="order.food.id"></OrderItem>
 </div>
 </template>
 
 <script>
 import OrderItem from "@/components/OrderItem";
+import {useOrderItemsStore} from "@/store/OrderItemsStore";
+import {storeToRefs} from "pinia";
+import {computed, watch} from "vue";
+
 export default {
   name: "OrderList",
   components: {OrderItem},
-  data(){
-    return{
-      arr: [1,2,3,4,5,6]
-    }
-  }
+  setup(){
+    const orderItemStore = useOrderItemsStore()
+    const {orders} = storeToRefs(orderItemStore)
+    return {orders}
+  },
+
 }
 </script>
 

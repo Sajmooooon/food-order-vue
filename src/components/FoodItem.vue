@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col food-item left-item-selected shadow-[3px_3px_3px_rgba(0,0,0,0.2)]">
+  <div class="flex flex-col food-item left-item-selected shadow-[3px_3px_3px_rgba(0,0,0,0.2)]" @click="orderItemsStore.addItemToStore($props.food)">
     <img class="relative h-3/4" :src="require('@/assets/'+$props.food.image)" :alt="$props.food.name">
     <div class="food-body mt-2 px-5 h-1/4">
       <div class="flex flex-col absolute bottom-1 justify-center pb-2 ">
@@ -17,6 +17,8 @@
 import {PropType} from "vue";
 import FoodItem from "@/types/FoodItem";
 import {defineComponent} from "vue";
+import {useOrderItemsStore} from "@/store/OrderItemsStore";
+
 
 export default  defineComponent({
   name: "FoodItem",
@@ -25,6 +27,11 @@ export default  defineComponent({
       required: true,
       type: Object as PropType<FoodItem>
     }
+  },
+  setup(){
+    const orderItemsStore = useOrderItemsStore()
+
+    return {orderItemsStore}
   }
 })
 </script>
