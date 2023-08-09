@@ -4,7 +4,9 @@ import FoodItem from "@/types/FoodItem";
 
 export const useOrderItemsStore = defineStore('orderItemsStore',{
     state: () =>({
-        orders: [] as Order[]
+        orders: [] as Order[],
+        total: 0 as number,
+        countOfItems: 0 as number
     }),
 
 
@@ -25,9 +27,24 @@ export const useOrderItemsStore = defineStore('orderItemsStore',{
             this.orders = this.orders.filter(item=> item.food.id!=food.id)
         },
 
-        // increaseItemInStore(food: FoodItem){
-        //
-        // }
+        changeQuantityOfItem(order: Order,increase: boolean){
+            const orderItemUpdate = this.orders.find(item=>item.food.id === order.food.id)
+            if(orderItemUpdate){
+                if (increase){
+                    orderItemUpdate.quantity++
+                }
+                else {
+                    orderItemUpdate.quantity--
+                    this.checkQuantity(order)
+                }
+            }
+        },
+
+        checkQuantity(order: Order){
+          if(order.quantity <1){
+              this.removeItemFromStore(order.food)
+          }
+        }
 
     }
 })
