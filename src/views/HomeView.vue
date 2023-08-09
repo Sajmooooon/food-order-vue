@@ -1,8 +1,8 @@
 <template>
   <div class="h-screen w-full flex flex-row" >
     <SideNavLeft></SideNavLeft>
-    <div class="pl-[120px] w-full">
-      <div class="p-10 flex-col flex justify-between">
+    <div class="main">
+      <div class="main-items flex-col flex justify-between">
           <div>
             <SearchBar></SearchBar>
             <FoodItemsList></FoodItemsList>

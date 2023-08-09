@@ -30,20 +30,6 @@ export default defineComponent(
 </script>
 
 <style scoped>
-.side-nav-right{
-  float: right;
-  position: fixed;
-  z-index: 20;
-  top: 0;
-  right: 0;
-  width: 0;
-  bottom: 0;
-  transition: all 0.2s;
-  background: #f8f4f4;
-}
 
-.showing{
-  width: 350px;
-}
 
 </style>
