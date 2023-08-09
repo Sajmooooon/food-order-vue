@@ -28,12 +28,14 @@
           <input type="text" class="outline-none w-full" :class="{'input-right':!editAddress, 'editable-input': editAddress}" v-model="user.phone" required :readonly="!editAddress">
         </div>
 
-        <div class="flex flex-row justify-between items-center w-full my-3 border-gray-300 border-t">
-          <span class="text-2xl font-bold">Total:</span>
-          <span class="text-3xl text-violet-700 text-right py-2">150 €</span>
-        </div>
+        <div v-if="total>0">
+          <div class="flex flex-row justify-between items-center w-full my-3 border-gray-300 border-t">
+            <span class="text-2xl font-bold">Total:</span>
+            <span class="text-3xl text-violet-700 text-right py-2">{{total}} €</span>
+          </div>
 
-        <button name="submit" type="submit" class="left-item-selected text-3xl py-2 px-5 rounded-2xl">Checkout</button>
+          <button name="submit" type="submit" class="left-item-selected text-3xl py-2 px-5 rounded-2xl">Checkout</button>
+        </div>
       </form>
   </div>
 </div>
@@ -43,17 +45,23 @@
 import {useUserInfoStore} from "@/store/UserInfoStore";
 import {defineComponent, ref} from "vue";
 import {storeToRefs} from "pinia/dist/pinia";
+import {useOrderItemsStore} from "@/store/OrderItemsStore";
+
 export default defineComponent({
 
   name: "OrderDetails",
   setup(){
     const userInfoStore = useUserInfoStore()
+    const orderItemsSotre = useOrderItemsStore()
     const {user} = storeToRefs(userInfoStore)
+    const {total} = storeToRefs(orderItemsSotre)
     const editAddress = ref(false)
 
     const updateUserDetails = () =>{
       console.log('submit')
     }
+
+
 
     const toggleEdit = () =>{
       editAddress.value = !editAddress.value
@@ -64,7 +72,7 @@ export default defineComponent({
       }
     }
 
-    return {editAddress, user, updateUserDetails,toggleEdit}
+    return {editAddress, user, updateUserDetails,toggleEdit, total}
   },
 
 })

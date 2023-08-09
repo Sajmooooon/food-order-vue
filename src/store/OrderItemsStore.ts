@@ -5,11 +5,23 @@ import FoodItem from "@/types/FoodItem";
 export const useOrderItemsStore = defineStore('orderItemsStore',{
     state: () =>({
         orders: [] as Order[],
-        total: 0 as number,
-        countOfItems: 0 as number
+
     }),
 
 
+    getters: {
+        total: (state) => {
+          let sum = 0
+          state.orders.forEach(item => sum += (item.quantity * item.food.price) )
+          return sum
+        },
+        numberOfItems: (state) =>{
+            let sum = 0
+            state.orders.forEach(item => sum += item.quantity )
+            return sum
+        }
+
+    },
 
     actions: {
         addItemToStore(food: FoodItem){
@@ -21,7 +33,6 @@ export const useOrderItemsStore = defineStore('orderItemsStore',{
             else{
                 this.orders.push({food: food, quantity: 1})
             }
-            console.log(this.orders)
         },
         removeItemFromStore(food:FoodItem){
             this.orders = this.orders.filter(item=> item.food.id!=food.id)
