@@ -13,7 +13,6 @@
 <style>
 body{
   min-width: fit-content;
-  background: #0c1424;
   margin: 0;
   min-height: 100vh;
   overflow-x: auto;

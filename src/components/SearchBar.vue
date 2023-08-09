@@ -26,7 +26,6 @@
 <script lang="ts">
 import {ref} from "vue";
 import {useFoodItemsStore} from "@/store/FoodItemsStore";
-import {storeToRefs} from "pinia/dist/pinia";
 import {useCartItemsStore} from "@/store/CartItemsStore";
 
 export default {

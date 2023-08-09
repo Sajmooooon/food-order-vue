@@ -1,10 +1,10 @@
 <template>
   <div :class="{'showing': showCart}" class="side-nav-right flex flex-col justify-between shadow-[0_0_10px_rgba(0,0,0,0.5)]">
-    <div class="flex-col flex gap-2 h-full">
-      <UserDetail></UserDetail>
-      <OrderList></OrderList>
-    </div>
-    <OrderDetails></OrderDetails>
+<!--    <div class="flex-col flex gap-2 h-full">-->
+      <UserDetail class="flex-0.5"></UserDetail>
+      <OrderList class="flex-1"></OrderList>
+<!--    </div>-->
+    <OrderDetails class="flex-0.5"></OrderDetails>
   </div>
 </template>
 
